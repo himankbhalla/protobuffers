@@ -1,0 +1,22 @@
+// job/job.proto
+syntax = "proto3";
+
+package job;
+
+service JobsService {
+  rpc FindOne (JobById) returns (Job) {}
+}
+
+message JobById {
+  int32 id = 1;
+}
+
+message Job {
+  int32 id = 1;
+  string company = 2;
+  string notes = 3;
+  optional string customer_email = 4;
+  string company_website = 5;
+  string role = 6;
+  int32 max_acceptable_rate = 7;
+}
