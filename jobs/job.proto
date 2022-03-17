@@ -19,4 +19,5 @@ message Job {
   string company_website = 5;
   string role = 6;
   int32 max_acceptable_rate = 7;
+  int32 job_status_id = 8;
 }
